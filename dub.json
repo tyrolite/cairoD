@@ -13,8 +13,16 @@
 	"-ddoxFilterArgs": ["--unittest-examples"],
 	"configurations": [
 		{
-			"name": "static-lib",
+			"name": "static-lib-minimal",
 			"targetType": "staticLibrary",
+		},
+		{
+			"name": "static-lib-linux",
+			"platforms": ["linux"],
+			"targetType": "staticLibrary",
+			"dependencies": {
+				"x11": ">=1.0.1"
+			}
 		},
 		{
 			"name": "unittest",

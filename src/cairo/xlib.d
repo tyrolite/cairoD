@@ -28,8 +28,9 @@ import cairo.c.cairo;
 static if(CAIRO_HAS_XLIB_SURFACE)
 {
     import cairo.c.xlib;
-    //Requires XLIB bindings: http://www.dsource.org/projects/bindings/browser/trunk/X11
-    import std.c.linux.X11.Xlib;
+	//Requires XLIB bindings: http://code.dlang.org/packages/x11
+    import x11.Xlib;
+	import x11.X;
 
     /**
      * The XLib surface is used to render cairo graphics to X Window
